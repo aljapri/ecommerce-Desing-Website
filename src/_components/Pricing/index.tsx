@@ -15,7 +15,7 @@ const PricingSection: React.FC= () => (
 
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6 mt-12 max-sm:max-w-sm max-sm:mx-auto">
         {pricingPlans.map((plan, index) => (
-          <PricingCard key={index} {...plan} />
+          <PricingCard key={index} {...plan} time={index} />
         ))}
       </div>
     </div>

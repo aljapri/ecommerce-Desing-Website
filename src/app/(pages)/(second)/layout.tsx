@@ -1,6 +1,6 @@
-import BackNavigation from "@/_components/BackNavigation";
+// import BackNavigation from "@/_components/BackNavigation";
 import Footer from "@/_components/Footer";
-
+import Navigation from "@/_components/Navigator";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <div>
-        <BackNavigation/>
+        <Navigation/>
         <div className="mt-20"></div>
         {children}
         <Footer/>
