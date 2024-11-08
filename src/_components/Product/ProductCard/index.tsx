@@ -1,5 +1,5 @@
 "use client";
-import { fadeIn } from "@/utils/motion";
+// import { fadeIn } from "@/utils/motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -14,10 +14,9 @@ interface Product {
 
 const ProductCard: React.FC<{ product: Product; time: number }> = ({
   product,
-  time,
 }) => {
   return (
-    <motion.div key={product.id}>
+    <motion.div key={product.id} >
       <div className=" bg-gray-100  rounded-xl hover:scale-[1.03] transition-all relative overflow-hidden shadow-xl">
         <div className="">
           <div className="w-2/3 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
