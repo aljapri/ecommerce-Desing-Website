@@ -9,8 +9,8 @@ const AboutUs: React.FC = () => {
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
           
           {/* Images Section */}
-          <div className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
-            <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
+          <div className="flex justify-center items-start gap-6 sm:grid sm:grid-cols-2 grid-cols-1  lg:order-first order-last">
+            <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex ">
               <Image
                 width={200}
                 height={200}

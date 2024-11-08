@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 const Hero = () => {
   return (
-    <div className="font-sans max-w-6xl max-md:max-w-md mx-auto">
+    <div className="font-sans max-w-6xl max-md:max-w-md mx-auto mt-20">
       <div className="grid md:grid-cols-2 items-center md:gap-8 gap-6">
         <motion.div
-          variants={fadeIn("right", "spring", 2 * 0.5, 0.75)}
+          variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
         </motion.div>
         <motion.div
-          variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
+          variants={fadeIn("right", "spring", 2 * 0.5, 0.75)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
