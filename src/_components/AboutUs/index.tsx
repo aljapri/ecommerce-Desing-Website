@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import ContuctUsButton from '../ContactUsButton';
+import Link from 'next/link';
 
 const AboutUs: React.FC = () => {
   return (
@@ -59,8 +60,10 @@ const AboutUs: React.FC = () => {
               </div>
             </div>
 
-
+            <div className='flex flex-row w-full justify-start items-center '>
             <ContuctUsButton content='تواصل معنا' classes=' text-white sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex'/>
+            <Link href="https://www.instagram.com/alrowaily_factory/" className=' text-white sm:w-fit w-full px-3.5 py-2 mr-4 bg-blue-500 hover:bg-blue-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex' > المشاريع </Link>
+            </div>
           </div>
         </div>
       </div>

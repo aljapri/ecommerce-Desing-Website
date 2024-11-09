@@ -8,16 +8,18 @@ const links = [
   ];
   
   const socialLinks = [
-    { platform: 'Facebook', url: 'https://www.facebook.com', icon: FaFacebookF },
-    { platform: 'LinkedIn', url: 'https://www.linkedin.com', icon: FaLinkedinIn },
-    { platform: 'Instagram', url: 'https://www.instagram.com', icon: FaInstagram },
-    { platform: 'Twitter', url: 'https://www.twitter.com', icon: FaTwitter },
+    { platform: 'Facebook', url: 'https://www.instagram.com/alrowaily_factory/', icon: FaFacebookF },
+    { platform: 'LinkedIn', url: 'https://www.instagram.com/alrowaily_factory/', icon: FaLinkedinIn },
+    { platform: 'Instagram', url: 'https://www.instagram.com/alrowaily_factory/', icon: FaInstagram },
+    { platform: 'Twitter', url: 'https://www.instagram.com/alrowaily_factory/', icon: FaTwitter },
   ];
 
   const contactDetails = [
     { text: '123 Street, City Name' },
-    { text: 'contact@example.com' },
-    { text: '+1 234 567 890' },
+    { text: 'm.w.b.92@hotmail.com' },
+    { text: '+966 0505870237' },
+    { text: '+966 0505820333' },
+
   ];
   const features = [
     {

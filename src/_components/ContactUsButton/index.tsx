@@ -15,7 +15,7 @@ function ContuctUsButton({
           ? classes
           : "w-full mt-6 px-5 py-2.5 text-sm text-white bg-blue-500 hover:bg-blue-600 rounded-md"
       } inline-flex items-center justify-center`} // Ensures it has the same styling as a button
-      href={"https://wa.me/0985306816"}
+      href={"https://wa.me/009660505820333"}
       style={{ textDecoration: "none" }}
     >
       {content ? content : "تواصل معنا"}

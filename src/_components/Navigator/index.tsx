@@ -50,7 +50,7 @@ const Navigation: React.FC = () => {
               </Link>
             </li>
             {links.map((item) => (
-              <Link key={item.href} href={item.href}>
+              <Link key={item.href} href={item.href} onClick={handleClick}>
                 <li className="max-lg:border-b max-lg:py-3 px-3">
                   <span
                     className={`hover:text-[#007bff] block font-bold text-[15px] ${
