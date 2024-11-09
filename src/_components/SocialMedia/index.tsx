@@ -9,7 +9,7 @@ function SoicalMedia() {
               {socialLinks.map((platform) => (
                 <li key={platform.platform}>
                   <Link href={platform.url} passHref>
-                     <platform.icon/>
+                     <platform.icon size={20}/>
                   </Link>
                 </li>
               ))}

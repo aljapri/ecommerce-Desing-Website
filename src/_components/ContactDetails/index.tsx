@@ -3,7 +3,7 @@ import React from 'react'
 
 function ContactDetails({fatehr,sib}:{fatehr?:string,sib?:string}) {
   return (
-    <div className={` ${fatehr}`} dir='ltr'>
+    <div className={` ${fatehr}`} dir='rtl'>
     {contactDetails.map((item)=>(
           <p key={item.text} className={sib}>{item.text}</p>
     ))}
