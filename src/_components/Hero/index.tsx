@@ -6,64 +6,37 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 const Hero = () => {
   return (
-    <div className="font-sans max-w-6xl max-md:max-w-md mx-auto mt-20">
-      <div className="grid md:grid-cols-2 items-center md:gap-8 gap-6">
-        <motion.div
-          variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="max-md:order-1 max-md:text-center" dir="rtl">
-            <p className="text-sm font-bold text-blue-600 mb-2">
-              <span className="rotate-90 inline-block mr-2">|</span> الحل الشامل
-              لتجديد ديكور منزلك
-            </p>
-            <h2 className="text-gray-800 md:text-5xl text-3xl font-extrabold mb-4 md:!leading-[55px]">
-              اجعل ديكور منزلك مميزًا بأبواب ونوافذ فريدة
-            </h2>
-            <p className="mt-4 text-base text-gray-600 leading-relaxed">
-              اكتشف تشكيلتنا من الأبواب والنوافذ المصممة بعناية لتلائم جميع
-              أنماط الديكور. أضف لمسة من الجمال والأمان لمنزلك.
-            </p>
-            <div className="mt-8 space-x-4 flex flex-row-reverse">
-              <Link
-                href={"/contact"}
-                className="bg-blue-600 hover:bg-transparent hover:text-blue-600 border-2 border-blue-600 transition-all text-white font-semibold tracking-wide text-sm rounded-full px-6 py-2.5"
-              >
-                تواصل معنا
-              </Link>
-              <Link
-                href="/products"
-                type="button"
-                className="bg-transparent hover:bg-blue-600 hover:text-white border-2 border-blue-600 transition-all text-blue-600 font-semibold tracking-wide text-sm rounded-full px-6 py-2.5"
-              >
-                منتجاتنا
-              </Link>
-            </div>
+<section
+      className="relative w-full h-screen flex items-center justify-center bg-cover bg-center text-white"
+      style={{
+        backgroundImage: "url('/picture.webp')", // Add the background image here
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50" />
 
-            <hr className="mt-8 border-gray-300" />
-          </div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn("right", "spring", 2 * 0.5, 0.75)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="lg:h-[650px] md:h-[550px] flex items-center relative max-md:before:hidden before:absolute before:bg-blue-200 before:h-full before:w-3/4 before:right-0 before:z-0">
-            <Image
-              src="https://readymadeui.com/photo.webp"
-              alt="أبواب ونوافذ منزلية"
-              className="rounded-md lg:w-3/4 md:w-11/12 z-10 relative"
-              layout="intrinsic"
-              width={800}
-              height={600}
-            />
-          </div>
-        </motion.div>
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl text-center lg:text-left px-6 flex flex-col justify-center items-center">
+        <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-4">
+        مصنع الرويلي لأنظمة الألمنيوم        </h1>
+        <p className="text-lg lg:text-xl mb-8">
+        اجعل ديكور منزلك مميزًا بأبواب ونوافذ فريدة
+
+
+        </p>
+        {/* Buttons */}
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+          <button className="bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition">
+            اكتشف المزيد
+          </button>
+          <button className="bg-transparent text-white border border-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition">
+            أتصل بنا
+          </button>
+        </div>
+        {/* Icons */}
+        
       </div>
-    </div>
+    </section>
   );
 };
 

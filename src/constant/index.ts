@@ -2,8 +2,10 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from 'react-icons/f
 import { FaShieldAlt, FaBolt, FaCog } from 'react-icons/fa';
 const links = [
     { href: '/', name: 'الصفحة الرئيسية' },
-    { href: '/products', name: 'المنتجات' },
     { href: '/about', name: 'حولنا' },
+    { href: '/products', name: 'المنتجات' },
+    { href: '/services', name: 'الخدمات' },
+    { href: '/projects', name: 'المشاريع' },
     { href: '/contact', name: 'تواصل معنا' }
   ];
   

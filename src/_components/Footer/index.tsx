@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2 flex flex-col space-y-5">
             <Logo />
             <p className="text-[#0a4275] text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+            اجعل ديكور منزلك مميزًا بأبواب ونوافذ فريدة
             </p>
           </div>
 
