@@ -3,7 +3,7 @@ import React from 'react';
 import ContuctUsButton from '../ContactUsButton';
 import Link from 'next/link';
 
-const AboutUs: React.FC = () => {
+const AboutUs = ({message}:{message:string}) => {
   return (
     <section className="py-24 relative" dir='rtl'>
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
@@ -39,7 +39,8 @@ const AboutUs: React.FC = () => {
                   نحن نحقق النجاح معًا
                 </h2>
                 <p className="text-gray-500 text-xl   leading-relaxed lg:text-justify text-center">
-                مصنع الرويلي لأنظمة الألمنيوم تأسس مصنعنا في عام ١٩٩٠ م ومنذ انطلاقتنا كان هدفنا إرضاء زبائننا بجودة إنتاجنا والمصداقية في التعامل ودقة المواعيد، وهذا ما أكسبنا ثقتهم خبرتنا الطويلة أنتجت لدينا فريق عمل متخصص ومتكامل ومع تطور مجال المقاولات والعمل في المملكة كان لابد من مواكبة هذه التطورات. طورنا عملنا في مجال الواجهات الزجاجية و الستراكتشر وتكسيات الألمنيوم ( الكلادينك ) و القبب الزجاجية بالإضافة لفريق عمل مختص في تصنيع وتركيب قواطع الحمامات والشاورات الزجاجية وواجهات السيكوريت و مؤخراً تم إنشاء مصنع رديف مختص بأعمال البخ الحراري و البودر كوتنج ( خبير الألوان ) و أتبعناه بمصنع كبير متخصص بأعمال تخشيب الألمنيوم بكافة أشكاله بأحدث التقنيات ( مصنع خبراء الألوان المتحدة ) طموحنا لا يتوقف وهدفنا دائماً إرضاء عملائنا وتحدث بصمة في مجال العمل وتحقيق رؤى المملكة                </p>
+                  {message}
+                </p>
               </div>
 
               {/* Statistics */}
@@ -59,7 +60,7 @@ const AboutUs: React.FC = () => {
               </div>
             </div>
 
-            <div className='flex flex-row w-full justify-start items-center '>
+            <div className='flex flex-row w-full justify-center items-center lg:justify-start'>
             <ContuctUsButton content='تواصل معنا' classes=' text-white sm:w-fit w-full px-3.5 py-2 bg-blue-500 hover:bg-blue-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex'/>
             <Link href="https://www.instagram.com/alrowaily_factory/" className=' text-white sm:w-fit w-full px-3.5 py-2 mr-4 bg-blue-500 hover:bg-blue-600 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex' > المشاريع </Link>
             </div>

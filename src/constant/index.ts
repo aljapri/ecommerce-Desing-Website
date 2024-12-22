@@ -3,10 +3,11 @@ import { FaShieldAlt, FaBolt, FaCog } from 'react-icons/fa';
 const links = [
     { href: '/', name: 'الصفحة الرئيسية' },
     { href: '/about', name: 'حولنا' },
-    { href: '/products', name: 'المنتجات' },
+    // { href: '/products', name: 'المنتجات' },
     { href: '/services', name: 'الخدمات' },
     { href: '/projects', name: 'المشاريع' },
-    { href: '/contact', name: 'تواصل معنا' }
+    { href: '/contact', name: 'تواصل معنا' },
+    { href: '/certificates', name: ' شهاداتنا' }
   ];
   
   const socialLinks = [
@@ -32,12 +33,12 @@ const links = [
     {
       icon: FaShieldAlt,
       title: 'الأمان',
-      description: 'نحن نقدم لك أفضل خيارات الأمان لمنتجات الأبواب والنوافذ لضمان حماية منزلك.',
+      description: 'نحن نقدم لك أفضل وأعلى خيارات الأمان لمنتجات الأبواب والنوافذ لضمان حماية منزلك بالكامل.',
     },
     {
       icon: FaBolt,
       title: 'الأداء',
-      description: 'استمتع بالأداء المثالي والتصميمات الفعّالة التي تعزز من جودة منزلك وجماله.',
+      description: 'استمتع بالأداء المثالي والتصميمات الفعّالة التي تعزز من جودة منزلك وجماله وتوفر لك الراحة والتميز',
     },
   ];
   
