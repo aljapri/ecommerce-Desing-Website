@@ -19,7 +19,7 @@ const Features: FC = () => {
               variants={fadeIn("up", "spring", index * 0.5, 0.75)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.3 }} // Triggers when 30% of element is in view
+              viewport={{ once: true, amount: 0.3 }} 
             >
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all py-5">
                 <div className="p-8">

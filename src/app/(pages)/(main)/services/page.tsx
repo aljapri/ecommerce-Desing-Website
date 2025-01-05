@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 const services = [
   {
     id: "door-design",
@@ -22,47 +23,59 @@ const services = [
     id: "decor-design",
     title: "تصميم المنافذ",
     description:
-    "نحن نقدم حلول تصميم داخلي وخارجي تحقق التوازن بين الجمال والوظيفة. من منازل أحلامك إلى المساحات التجارية، نحن نجعل كل تفاصيل مهمة.",
+      "نحن نقدم حلول تصميم داخلي وخارجي تحقق التوازن بين الجمال والوظيفة. من منازل أحلامك إلى المساحات التجارية، نحن نجعل كل تفاصيل مهمة.",
     image: "two.jpg", // صورة الديكور
   },
   {
     id: "installation",
     title: "تركيب الأبواب والنوافذ",
     description:
-      "نقوم بتركيب الأبواب والنوافذ بكل احترافية وسرعة. فريقنا المتخصص يضمن لك تركيباً دقيقاً وآمناً.",
+      "نقوم بتركيب الأبواب والنوافذ بكل احترافية وسرعة. فريقنا المتخصص يضمن لك تركيباً دقيقاً وآمناًو نحن نجعل كل التفاصيل مهمة",
     image: "four.jpg", // صورة التركيب
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8" dir="rtl">
       <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-12">
         خدماتنا المتميزة
       </h2>
 
       <div className="flex flex-wrap justify-center gap-8">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className="flex flex-col bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 max-w-xs"
+        {services.map((service,index) => (
+          <motion.div
+            key={service.title}
+            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }} // Triggers when 30% of element is in view
           >
-            <Image
-              src={"/service/"+service.image}
-              alt={service.title}
-              width={200}
-              height={200}
-              className="w-full h-48 object-cover rounded-md mb-6"
-            />
-            <h3 className="text-xl font-semibold text-gray-700">{service.title}</h3>
-            <p className="text-gray-600 text-sm mt-2 mb-4">{service.description}</p>
-            <Link
-              href={`/services/${service.id}`}
-              className="inline-block text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-center"
+            <div
+              key={service.id}
+              className="flex flex-col bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 max-w-xs"
             >
-              استفسر عن الخدمة
-            </Link>
-          </div>
+              <Image
+                src={"/service/" + service.image}
+                alt={service.title}
+                width={200}
+                height={200}
+                className="w-full h-48 object-cover rounded-md mb-6"
+              />
+              <h3 className="text-xl font-semibold text-gray-700">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-sm mt-2 mb-4">
+                {service.description}
+              </p>
+              <Link
+                href={`/contact`}
+                className="inline-block text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md text-center"
+              >
+                استفسر عن الخدمة
+              </Link>
+            </div>
+          </motion.div>
         ))}
       </div>
     </section>

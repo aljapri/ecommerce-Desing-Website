@@ -4,7 +4,7 @@ const links = [
     { href: '/', name: 'الصفحة الرئيسية' },
     { href: '/about', name: 'حولنا' },
     // { href: '/products', name: 'المنتجات' },
-    { href: '/services', name: 'الخدمات' },
+    // { href: '/services', name: 'الخدمات' },
     { href: '/projects', name: 'المشاريع' },
     { href: '/contact', name: 'تواصل معنا' },
     { href: '/certificates', name: ' شهاداتنا' }

@@ -5,7 +5,7 @@
 body {
   --font-geist-sans: 'Geist Sans', sans-serif;
   --font-geist-mono: 'Geist Mono', monospace;
-  background-color: rgba(192, 192, 192, 0.261);
+  background-color: #f3f4f6;
 }
 
 @layer base {

@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { SetStateAction, useState } from "react";
-
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 export default function GallerySection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState("");
@@ -24,7 +25,9 @@ export default function GallerySection() {
             مشاريعنا
           </h2>
           <div className="w-full text-center text-gray-600 text-lg leading-8">
-          نقدم لكم عرضًا مميزًا لمشاريعنا التي تمثل إبداعًا، ابتكارًا، ودقة في التنفيذ          </div>
+            نقدم لكم عرضًا مميزًا لمشاريعنا التي تمثل إبداعًا، ابتكارًا، ودقة في
+            التنفيذ{" "}
+          </div>
         </div>
 
         {/* Gallery Grid */}
@@ -34,26 +37,22 @@ export default function GallerySection() {
             <div className="grid md:grid-cols-12 gap-8 lg:mb-11 mb-7">
               <div className="md:col-span-4 md:h-[404px] h-[277px] w-full rounded-3xl">
                 <Image
-                    width={200}
-                    height={200}
+                  width={200}
+                  height={200}
                   src="/one.jpeg"
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-4 md:col-span-6 w-full h-full cursor-pointer"
-                  onClick={() =>
-                    openLightbox("/one.jpeg")
-                  }
+                  onClick={() => openLightbox("/one.jpeg")}
                 />
               </div>
               <div className="md:col-span-8 md:h-[404px] h-[277px] w-full rounded-3xl">
                 <Image
-                    width={200}
-                    height={200}
+                  width={200}
+                  height={200}
                   src="/tow.jpeg"
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-8 md:col-span-6 w-full h-full cursor-pointer"
-                  onClick={() =>
-                    openLightbox("/tow.jpeg")
-                  }
+                  onClick={() => openLightbox("/tow.jpeg")}
                 />
               </div>
             </div>
@@ -61,21 +60,36 @@ export default function GallerySection() {
             {/* Second Row */}
             <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
               {[
-                "/three.jpeg","/four.jpeg","/five.jpeg","/six.jpeg","/siven.jpeg","/eight.jpeg","/nign.jpeg","/ten.jpeg","/elve.jpeg","/tilve.jpeg","/threten.jpeg"
+                "/three.jpeg",
+                "/four.jpeg",
+                "/five.jpeg",
+                "/six.jpeg",
+                "/siven.jpeg",
+                "/eight.jpeg",
+                "/nign.jpeg",
+                "/ten.jpeg",
+                "/elve.jpeg",
+                "/tilve.jpeg",
+                "/threten.jpeg",
               ].map((src, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="h-[277px] w-full rounded-3xl"
+                  variants={fadeIn("left", "spring", index * 0.2, 0.75)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true}} // Triggers when 30% of element is in view
                 >
-                  <Image
-                    width={200}
-                    height={200}
-                    src={src}
-                    alt={`Gallery image ${index + 1}`}
-                    className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto w-full h-full cursor-pointer"
-                    onClick={() => openLightbox(src)}
-                  />
-                </div>
+                  <div key={index} className="h-[277px] w-full rounded-3xl">
+                    <Image
+                      width={200}
+                      height={200}
+                      src={src}
+                      alt={`Gallery image ${index + 1}`}
+                      className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto w-full h-full cursor-pointer"
+                      onClick={() => openLightbox(src)}
+                    />
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -95,8 +109,8 @@ export default function GallerySection() {
             &times;
           </span>
           <Image
-                    width={400}
-                    height={400}
+            width={400}
+            height={400}
             src={lightboxImage}
             alt="Lightbox"
             className="max-w-full max-h-full "
