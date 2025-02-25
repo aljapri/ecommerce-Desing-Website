@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination, A11y } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -27,7 +27,8 @@ const VerticalImageSlider = () => {
   //   };
   // }, []);
 
-  const handleSlideChange = (swiper: any) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSlideChange = (swiper:any) => {
     setIsLastSlide(swiper.activeIndex === media.length - 1);
   };
 

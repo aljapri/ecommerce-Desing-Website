@@ -2,7 +2,6 @@
 import AboutUs from "@/_components/AboutUs";
 import ContactUs from "@/_components/ContactUs";
 import Features from "@/_components/Features";
-import Hero from "@/_components/Hero";
 import React from "react";
 import ServicesSection from "./services/page";
 import { motion } from "framer-motion";
