@@ -10,11 +10,11 @@ const Hero = () => {
   const videoRef = useRef(null); // Create a ref for the video element
 
   // Function to handle the end of the video
-  const handleVideoEnd = () => {
-    if (videoRef.current) {
-      videoRef.current.pause(); // Pause the video when it ends
-    }
-  };
+  // const handleVideoEnd = () => {
+  //   if (videoRef.current) {
+  //     videoRef.current.pause(); // Pause the video when it ends
+  //   }
+  // };
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
@@ -23,7 +23,7 @@ const Hero = () => {
         ref={videoRef} // Attach the ref to the video element
         autoPlay
         muted
-        onEnded={handleVideoEnd} // Call handleVideoEnd when the video ends
+        // onEnded={handleVideoEnd} // Call handleVideoEnd when the video ends
         className="absolute inset-0 w-full h-full object-cover"
         style={{
           minWidth: "100%",
