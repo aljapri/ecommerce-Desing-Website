@@ -6,11 +6,11 @@ function Logo() {
   return (
     <Link href="/" className=''>
     <Image
-      src="https://readymadeui.com/readymadeui.svg"
+      src="/logo.jpeg"
       alt="logo"
       width={144}
       height={36}
-      className="w-36"
+      className='w-12'
     />
   </Link>
   )

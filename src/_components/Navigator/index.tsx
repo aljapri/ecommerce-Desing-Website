@@ -39,15 +39,7 @@ const Navigation: React.FC = () => {
 
           <ul className="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50" dir="rtl" >
             <li className="mb-6 hidden max-lg:block">
-              <Link href="#">
-                <Image
-                  src="https://readymadeui.com/readymadeui.svg"
-                  alt="logo"
-                  width={144}
-                  height={36}
-                  className="w-36"
-                />
-              </Link>
+              <Logo/>
             </li>
             {links.map((item) => (
               <Link key={item.href} href={item.href} onClick={handleClick}>

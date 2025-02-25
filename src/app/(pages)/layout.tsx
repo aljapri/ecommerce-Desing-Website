@@ -9,7 +9,7 @@ export default function RootLayout({
     const queryClient = new QueryClient();
 
   return (
-    <div>
+    <div className='overflow-hidden'>
             <QueryClientProvider client={queryClient}>
 
         {children}

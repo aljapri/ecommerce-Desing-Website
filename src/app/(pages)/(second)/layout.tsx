@@ -8,10 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <div>
-        <Navigation/>
+        {/* <Navigation/> */}
         <div className="mt-20"></div>
         {children}
-        <Footer/>
+        {/* <Footer/> */}
     </div>
   );
 }
