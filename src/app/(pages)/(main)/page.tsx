@@ -1,58 +1,58 @@
 "use client";
-import { lazy, Suspense, useEffect, useRef } from "react";
+import AboutUs from "@/_components/AboutUs";
+import ContactUs from "@/_components/ContactUs";
+import Features from "@/_components/Features";
+import React, { useEffect, useRef } from "react";
+import ServicesSection from "./services/page";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
-import { debounce } from "lodash";
-
-const LazyAboutUs = lazy(() => import("@/_components/AboutUs"));
-const LazyContactUs = lazy(() => import("@/_components/ContactUs"));
-const LazyFeatures = lazy(() => import("@/_components/Features"));
-const LazyServicesSection = lazy(() => import("./services/page"));
-const LazyVerticalImageSlider = lazy(() => import("@/_components/Slider"));
-const LazyTimeline = lazy(() => import("@/_components/TimeLine"));
+import VerticalImageSlider from "@/_components/Slider";
+import Timeline from "@/_components/TimeLine";
 
 export default function Page() {
-  const prevScrollY = useRef(0);
+  const prevScrollY = useRef(0); // Track the previous scroll position
 
   useEffect(() => {
-    const handleScroll = debounce(() => {
+    const handleScroll = () => {
       const currentScrollY = window.pageYOffset;
 
+      // Check if the user is scrolling up and the distance from the top is 200px or less
       if (currentScrollY < prevScrollY.current && currentScrollY <= 800) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        // Scroll to the top smoothly
+        window.scrollTo({ top: 0, behavior: "auto" });
       }
 
+      // Update the previous scroll position
       prevScrollY.current = currentScrollY;
-    }, 100);
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
 
+    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      handleScroll.cancel();
     };
   }, []);
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <LazyVerticalImageSlider />
-        <LazyTimeline />
-        <LazyAboutUs message="مصنع الرويلي لأنظمة الألمنيوم تأسس مصنعنا في عام ١٩٩٠ م ومنذ انطلاقتنا كان هدفنا إرضاء زبائننا بجودة إنتاجنا والمصداقية في التعامل ودقة المواعيد، وهذا ما أكسبنا ثقتهم خبرتنا الطويلة أنتجت لدينا فريق عمل متخصص ومتكامل ومع تطور مجال المقاولات والعمل في المملكة كان لابد من مواكبة هذه التطورات" />
-        <LazyFeatures />
-        <LazyServicesSection />
-        <motion.div
-          className="flex flex-col lg:flex-row gap-4 lg:gap-6"
-          variants={fadeIn("up", "spring", 0.5, 0.75)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-        >
-          <div className="bg-white w-full px-5">
-            <LazyContactUs />
-          </div>
-        </motion.div>
-      </Suspense>
+      <VerticalImageSlider />
+      <Timeline />
+      <AboutUs message=" مصنع الرويلي لأنظمة الألمنيوم تأسس مصنعنا في عام ١٩٩٠ م ومنذ انطلاقتنا كان هدفنا إرضاء زبائننا بجودة إنتاجنا والمصداقية في التعامل ودقة المواعيد، وهذا ما أكسبنا ثقتهم خبرتنا الطويلة أنتجت لدينا فريق عمل متخصص ومتكامل ومع تطور مجال المقاولات والعمل في المملكة كان لابد من مواكبة هذه التطورات" />
+      <Features />
+      <ServicesSection />
+      <motion.div
+        className="flex flex-col lg:flex-row gap-4 lg:gap-6"
+        variants={fadeIn("up", "spring", 0.5, 0.75)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="bg-white w-full px-5">
+          <ContactUs />
+        </div>
+      </motion.div>
+      {/* Add the Vertical Image Slider here */}
     </div>
   );
 }
