@@ -3,7 +3,7 @@ import React from 'react'
 function Form() {
   return (
     <form>
-      <div className="space-y-4 mt-8" dir='rtl'>
+      {/* <div className="space-y-4 mt-8" dir='rtl'>
         <input
           type="text"
           placeholder="الاسم الكامل"
@@ -47,7 +47,7 @@ function Form() {
         className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white"
       >
         إرسال رسالة عبر البريد الإلكتروني
-      </button>
+      </button> */}
     </form>
   )
 }

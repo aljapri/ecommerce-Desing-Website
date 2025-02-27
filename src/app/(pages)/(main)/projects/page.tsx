@@ -39,20 +39,20 @@ export default function GallerySection() {
                 <Image
                   width={200}
                   height={200}
-                  src="/one.jpeg"
+                  src="/pro1.jpeg"
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-4 md:col-span-6 w-full h-full cursor-pointer"
-                  onClick={() => openLightbox("/one.jpeg")}
+                  onClick={() => openLightbox("/pro1.jpeg")}
                 />
               </div>
               <div className="md:col-span-8 md:h-[404px] h-[277px] w-full rounded-3xl">
                 <Image
                   width={200}
                   height={200}
-                  src="/tow.jpeg"
+                  src="/pro2.jpeg"
                   alt="Gallery image"
                   className="gallery-image object-cover rounded-3xl hover:grayscale transition-all duration-700 ease-in-out mx-auto lg:col-span-8 md:col-span-6 w-full h-full cursor-pointer"
-                  onClick={() => openLightbox("/tow.jpeg")}
+                  onClick={() => openLightbox("/pro2.jpeg")}
                 />
               </div>
             </div>
@@ -60,9 +60,6 @@ export default function GallerySection() {
             {/* Second Row */}
             <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
               {[
-                "/three.jpeg",
-                "/four.jpeg",
-                "/five.jpeg",
                 "/six.jpeg",
                 "/siven.jpeg",
                 "/eight.jpeg",
@@ -71,6 +68,9 @@ export default function GallerySection() {
                 "/elve.jpeg",
                 "/tilve.jpeg",
                 "/threten.jpeg",
+                "/pro3.jpeg",
+                "/pro4.jpeg",
+                "/pro5.jpeg"
               ].map((src, index) => (
                 <motion.div
                   key={index}

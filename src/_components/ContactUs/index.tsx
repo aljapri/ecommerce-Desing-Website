@@ -9,7 +9,7 @@ function ContactUs() {
     <div className="m-20 grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-blue-400 before:h-full max-md:before:hidden">
       <div dir='rtl'>
         <h2 className="text-gray-800 text-3xl font-extrabold">تواصل معنا</h2>
-        <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+        <p className="text-m text-gray-500 mt-4 leading-relaxed">
           هل لديك استفسار محدد أو ترغب في استكشاف فرص جديدة في تصميم الأبواب والنوافذ؟ فريقنا ذو الخبرة مستعد للتفاعل معك.
         </p>
 

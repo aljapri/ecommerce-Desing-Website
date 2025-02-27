@@ -18,11 +18,14 @@ const links = [
   ];
 
   const contactDetails = [
-    { text: '123 Street, City Name' },
-    { text: 'm.w.b.92@hotmail.com' },
-    { text: '+966 0505870237' },
-    { text: '+966 0505820333' },
-
+    { text: ' 0505870237' },
+    { text: ' 0505820333' },
+    { text: ' 0559994325' },
+    { text: 'info@alrowaily.sa' },
+    { text: 'Waheeb@alrowaily.sa' },
+    { text: 'Mohammed@alrowaily.sa' },
+    { text: 'Heshaam@alrowaily.sa' },
+    { text: 'Qassem@alrowaily.sa' },
   ];
   const features = [
     {

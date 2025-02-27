@@ -17,7 +17,7 @@ const Navigation: React.FC = () => {
   };
   const path = usePathname();
   return (
-    <header className="shadow-md font-sans tracking-wide relative z-50">
+    <header className="shadow-md font-sans tracking-wide w-full relative z-50">
       <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]">
        <Logo/>
 
