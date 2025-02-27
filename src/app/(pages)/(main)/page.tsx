@@ -2,7 +2,7 @@
 import AboutUs from "@/_components/AboutUs";
 import ContactUs from "@/_components/ContactUs";
 import Features from "@/_components/Features";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ServicesSection from "./services/page";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
@@ -10,7 +10,6 @@ import VerticalImageSlider from "@/_components/Slider";
 import Timeline from "@/_components/TimeLine";
 
 export default function Page() {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const prevScrollY = useRef(0); // Track the previous scroll position
 
   useEffect(() => {
@@ -25,7 +24,6 @@ export default function Page() {
 
       // Update the previous scroll position
       prevScrollY.current = currentScrollY;
-      setScrollPosition(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
