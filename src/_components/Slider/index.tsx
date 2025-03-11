@@ -1,6 +1,6 @@
 "use client";
 
-import React, {  useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination, A11y } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -12,13 +12,12 @@ import Link from "next/link";
 
 const VerticalImageSlider = () => {
   const media = [
-    { type: "video", src: "/video/one.mp4", title: "شركة الرويلي لأنظمة الأمنيوم", description: "استكشف أحدث تصاميم الأبواب والنوافذ العصرية" },
-    { type: "image", src: "/one.jpeg", title: "تصميم خارجي فاخر", description: "ديكورات خارجية أنيقة تعكس ذوقك الرفيع" },
-    { type: "image", src: "/tow.jpeg", title: "نوافذ زجاجية حديثة", description: "نافذة بانورامية توفر إضاءة طبيعية وإطلالة رائعة" },
+    { type: "video", src: "/video/one.mp4", title: " الرويلي لأنظمة الأمنيوم", description: "استكشف أحدث تصاميم الأبواب والنوافذ العصرية" },
+    { type: "video", src: "/video/tow.mp4", title: "تصميم خارجي فاخر", description: "ديكورات خارجية أنيقة تعكس ذوقك الرفيع" },
+    { type: "video", src: "/video/three.mp4", title: "نوافذ زجاجية حديثة", description: "نافذة بانورامية توفر إضاءة طبيعية وإطلالة رائعة" },
     { type: "image", src: "/three.jpeg", title: "تصميم منزل عصري", description: "منزل بتصميم حديث يجمع بين الجمال والراحة" },
   ];
 
-  const [isLastSlide, setIsLastSlide] = useState(false);
 
   // useEffect(() => {
   //   document.body.style.overflow = "hidden";
@@ -28,14 +27,7 @@ const VerticalImageSlider = () => {
   // }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleSlideChange = (swiper:any) => {
-    setIsLastSlide(swiper.activeIndex === media.length - 1);
-  };
 
-  const scrollDown = () => {
-    window.scrollBy({ top: window.innerHeight+100, behavior: "smooth" });
-    setIsLastSlide(false);
-  };
 
   return (
     <div className="h-screen w-full relative">
@@ -49,7 +41,6 @@ const VerticalImageSlider = () => {
         loop={true} // Disable loop to detect the last slide properly
         effect={"fade"}
         className="h-full w-full"
-        onSlideChange={handleSlideChange}
       >
         {media.map((item, index) => (
           <SwiperSlide key={index} className="h-full w-full">
@@ -58,7 +49,7 @@ const VerticalImageSlider = () => {
               <div className="absolute inset-0 bg-black/40 z-10"></div>
 
               {item.type === "video" ? (
-                <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+                <video autoPlay muted loop playsInline className="w-full h-full object-fill">
                   <source src={item.src} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -77,7 +68,7 @@ const VerticalImageSlider = () => {
                 <motion.p className="text-lg lg:text-xl mb-8" variants={fadeIn("left", "spring", 0.5, 0.75)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.5 }}>
                   {item.description}
                 </motion.p>
-                {item.type === "video" && (
+                {index === 0 && (
                   <motion.div
                     className="flex flex-col lg:flex-row gap-4 lg:gap-6"
                     variants={fadeIn("right", "spring", 1, 0.75)}
@@ -104,16 +95,6 @@ const VerticalImageSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Scroll Down Button */}
-      {isLastSlide && (
-        <button
-          onClick={scrollDown}
-          className="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-white text-black px-6 py-3 rounded-md font-semibold hover:bg-gray-400 transition z-50"
-        >
-          انزل للأسفل
-        </button>
-      )}
     </div>
   );
 };

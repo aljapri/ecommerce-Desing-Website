@@ -1,43 +1,21 @@
 "use client";
-import AboutUs from "@/_components/AboutUs";
-import ContactUs from "@/_components/ContactUs";
-import Features from "@/_components/Features";
-import React, { useEffect, useRef } from "react";
-import ServicesSection from "./services/page";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/motion";
+// import AboutUs from "@/_components/AboutUs";
+// import ContactUs from "@/_components/ContactUs";
+// import Features from "@/_components/Features";
+import React from "react";
+// import ServicesSection from "./services/page";
+// import { motion } from "framer-motion";
+// import { fadeIn } from "@/utils/motion";
 import VerticalImageSlider from "@/_components/Slider";
-import Timeline from "@/_components/TimeLine";
+// import Timeline from "@/_components/TimeLine";
 
 export default function Page() {
-  const prevScrollY = useRef(0); // Track the previous scroll position
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.pageYOffset;
-
-      // Check if the user is scrolling up and the distance from the top is 200px or less
-      if (currentScrollY < prevScrollY.current && currentScrollY <= 800) {
-        // Scroll to the top smoothly
-        window.scrollTo({ top: 0, behavior: "auto" });
-      }
-
-      // Update the previous scroll position
-      prevScrollY.current = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div>
       <VerticalImageSlider />
-      <Timeline />
+      {/* <Timeline />
       <AboutUs message=" مصنع الرويلي لأنظمة الألمنيوم تأسس مصنعنا في عام ١٩٩٠ م ومنذ انطلاقتنا كان هدفنا إرضاء زبائننا بجودة إنتاجنا والمصداقية في التعامل ودقة المواعيد، وهذا ما أكسبنا ثقتهم خبرتنا الطويلة أنتجت لدينا فريق عمل متخصص ومتكامل ومع تطور مجال المقاولات والعمل في المملكة كان لابد من مواكبة هذه التطورات" />
       <Features />
       <ServicesSection />
@@ -51,7 +29,7 @@ export default function Page() {
         <div className="bg-white w-full px-5">
           <ContactUs />
         </div>
-      </motion.div>
+      </motion.div> */}
       {/* Add the Vertical Image Slider here */}
     </div>
   );
