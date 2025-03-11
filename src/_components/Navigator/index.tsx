@@ -17,8 +17,8 @@ const Navigation: React.FC = () => {
   };
   const path = usePathname();
   return (
-    <header className="shadow-md font-sans tracking-wide w-full relative z-50">
-      <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4 bg-white min-h-[70px]">
+    <header className=" font-sans tracking-wide w-full absolute z-50 text-white ">
+      <div className="flex flex-wrap items-center justify-between gap-4 px-10 py-4  min-h-[70px]">
        <Logo/>
 
         <div
@@ -45,7 +45,7 @@ const Navigation: React.FC = () => {
                 <li className="max-lg:border-b max-lg:py-3 px-3">
                   <span
                     className={`hover:text-[#007bff] block font-bold text-[15px] ${
-                      item.href === path ? "text-[#007bff]" : "text-[#333]"
+                      item.href === path ? "text-[#007bff]" : "text-white"
                     }`}
                   >
                     {item.name}
